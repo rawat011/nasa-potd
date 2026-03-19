@@ -1,0 +1,14 @@
+name: Hello CI World
+
+on: [push] # Triggers every time you push code
+
+jobs:
+  test-run:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Say Hello
+        run: echo "The GitHub Robot is alive!"
+
+      - name: Check Python Version
+        run: python3 --version
