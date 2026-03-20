@@ -25,7 +25,7 @@ jobs:
         env:
           API_TOKEN: ${{ secrets.API_TOKEN }}
         run: |
-          streamlit run main.py
+          timeout 1m streamlit run main.py
 
       - name: Upload Test Report
         if: always() # This ensures the report uploads even if a test fails
